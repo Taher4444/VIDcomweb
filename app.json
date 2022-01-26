@@ -27,6 +27,26 @@
             "description": "Get ur Id Of Telegram nd Paste Here.",
             "value": "",
             "required": false
+        },
+        " GroupName": {
+            "description": " Channel username Paste Here.",
+            "value": "",
+            "required": false
+        },
+        " GroupUrl": {
+            "description": " Channel URL Paste Here.",
+            "value": "",
+            "required": false
+        },
+        " GroupButton": {
+            "description": " Channel GroupButton Paste Here.",
+            "value": "",
+            "required": false
+        },
+        " GroupMessage": {
+            "description": " Channel GroupMessage Paste Here.",
+            "value": "",
+            "required": false
         }
     }
 }
