@@ -123,7 +123,7 @@ async def encc(e):
         a1 = await info(dl, e)
         a2 = await info(out, e)
         dk = await ds.reply(
-            f"الحجم السباق : {hbs(org)}\nالحجم الحالي : {hbs(com)}\nنسبة الضغط : {per}\n\nMediainfo: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
+            f"الحجم السابق : {hbs(org)}\nالحجم الحالي : {hbs(com)}\nنسبة الضغط : {per}\n\nMediainfo: [Before]({a1})//[After]({a2})\n\nDownloaded in {x}\nCompressed in {xx}\nUploaded in {xxx}",
             link_preview=False,
         )
         await ds.forward_to(LOG)
