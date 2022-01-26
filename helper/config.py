@@ -10,7 +10,7 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #    General Public License for more details.
 #
-#    License can be found in < https://github.com/1Danish-00/CompressorBot/blob/main/License> .
+#    License can be found in < https://github.com/wahebtalal/VideoCompressBot/blob/main/License> .
 
 from . import *
 
@@ -20,6 +20,10 @@ try:
     BOT_TOKEN = config("BOT_TOKEN")
     OWNER = config("OWNER_ID", default=1322549723, cast=int)
     LOG = config("LOG_CHANNEL", cast=int)
+    GroupName=config("GroupName",default="")
+    GroupUrl=config("GroupUrl")
+    GroupButton = config("GroupButton",default="الانظمام")
+    GroupMessage=config("GroupMessage",default="قناة البوت")
 except Exception as e:
     LOGS.info("Environment vars Missing")
     LOGS.info("something went wrong")

@@ -10,7 +10,7 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #    General Public License for more details.
 #
-#    License can be found in < https://github.com/1Danish-00/CompressorBot/blob/main/License> .
+#    License can be found in < https://github.com/wahebtalal/VideoCompressBot/blob/main/License> .
 
 from .stuff import *
 
@@ -18,7 +18,7 @@ from .stuff import *
 async def eval(event):
     if event.sender_id != OWNER:
         return
-    await event.reply("Processing ...")
+    await event.reply("جاري المعالجة ...")
     cmd = event.text.split(" ", maxsplit=1)[1]
     old_stderr = sys.stderr
     old_stdout = sys.stdout
@@ -41,7 +41,7 @@ async def eval(event):
     elif stdout:
         evaluation = stdout
     else:
-        evaluation = "Success"
+        evaluation = "تم بنجاح"
     final_output = "**EVAL**: `{}` \n\n **OUTPUT**: \n`{}` \n".format(cmd, evaluation)
     if len(final_output) > 4095:
         with io.BytesIO(str.encode(final_output)) as out_file:

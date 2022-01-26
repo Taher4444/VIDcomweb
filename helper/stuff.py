@@ -10,7 +10,7 @@
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #    General Public License for more details.
 #
-#    License can be found in < https://github.com/1Danish-00/CompressorBot/blob/main/License> .
+#    License can be found in < https://github.com/wahebtalal/VideoCompressBot/blob/main/License> .
 
 from .worker import *
 
@@ -29,12 +29,12 @@ async def up(event):
 async def start(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.reply(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
+        f"اهلا `{ok.user.first_name}`\nهذا بوت ضغط الفيديو.\nيقوم بتقليص حجم الفيديو مع الحفاظ على دقته.\nتستطيع انشاء لقطات شاشة\عينة للفيديو.",
         buttons=[
-            [Button.inline("HELP", data="ihelp")],
+            [Button.inline("مساعدة", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/CompressorBot"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("السورس كود", url="github.com/wahebtalal/VideoCompressBot"),
+                Button.url("المطور", url="t.me/Wahiebtalal"),
             ],
         ],
     )
@@ -42,26 +42,26 @@ async def start(event):
 
 async def help(event):
     await event.reply(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options"
-    )
+        "**🐠 بوت ضغط الفيديو**\n\n+يقوم هذا البوت بضغط مقاطع الفيديو مع تغيير ضئيل في الجودة.\n+انشاء عينة فيديو مضغوط\n+سهل الاستخدام\n-نظرًا لإعدادات الجودة ، يستغرق البوت وقتًا في الضغط.\nلذا كن صبورًا وأرسل مقاطع الفيديو واحدًا تلو الآخر بعد الانتهاء.\nلا تقم بارسال رسائل عشوائية لتجنب الحظر.\n\nفقط قم بإعادة توجيه الفيديو"
+                      )
 
 
 async def ihelp(event):
     await event.edit(
-        "**🐠 A Quality CompressorBot**\n\n+This Bot Compress Videos With Negligible Quality Change.\n+Generate Sample Compressed Video\n+Screenshots Too\n+Easy to Use\n-Due to Quality Settings Bot Takes Time To Compress.\nSo Be patience Nd Send videos One By One After Completing.\nDont Spam Bot.\n\nJust Forward Video To Get Options",
-        buttons=[Button.inline("BACK", data="beck")],
+        "**🐠 بوت ضغط الفيديو**\n\n+يقوم هذا البوت بضغط مقاطع الفيديو مع تغيير ضئيل في الجودة.\n+انشاء عينة فيديو مضغوط\n+سهل الاستخدام\n-نظرًا لإعدادات الجودة ، يستغرق البوت وقتًا في الضغط.\nلذا كن صبورًا وأرسل مقاطع الفيديو واحدًا تلو الآخر بعد الانتهاء.\nلا تقم بارسال رسائل عشوائية لتجنب الحظر.\n\nفقط قم بإعادة توجيه الفيديو",
+        buttons=[Button.inline("رجوع", data="beck")],
     )
 
 
 async def beck(event):
     ok = await event.client(GetFullUserRequest(event.sender_id))
     await event.edit(
-        f"Hi `{ok.user.first_name}`\nThis is A CompressorBot Which Can Encode Videos.\nReduce Size of Videos With Negligible Quality Change\nU can Generate Samples/screenshots too.",
-        buttons=[
-            [Button.inline("HELP", data="ihelp")],
+        f"اهلا `{ok.user.first_name}`\nهذا بوت ضغط الفيديو.\nيقوم بتقليص حجم الفيديو مع الحفاظ على دقته.\nتستطيع انشاء لقطات شاشة\عينة للفيديو.",
+             buttons=[
+            [Button.inline("مساعدة", data="ihelp")],
             [
-                Button.url("SOURCE CODE", url="github.com/1Danish-00/"),
-                Button.url("DEVELOPER", url="t.me/danish_00"),
+                Button.url("السورس كود", url="github.com/wahebtalal/VideoCompressBot"),
+                Button.url("المطور", url="t.me/Wahiebtalal"),
             ],
         ],
     )
@@ -70,13 +70,13 @@ async def beck(event):
 async def sencc(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "Choose Mode",
+        "اختر الطريقة",
         buttons=[
             [
-                Button.inline("Default Compress", data=f"encc{key}"),
-                Button.inline("Custom Compress", data=f"ccom{key}"),
+                Button.inline("الافتراضي", data=f"encc{key}"),
+                Button.inline("تخصيص", data=f"ccom{key}"),
             ],
-            [Button.inline("Back", data=f"back{key}")],
+            [Button.inline("رجوع", data=f"back{key}")],
         ],
     )
 
@@ -84,19 +84,19 @@ async def sencc(e):
 async def back(e):
     key = e.pattern_match.group(1).decode("UTF-8")
     await e.edit(
-        "🐠  **What To Do** 🐠",
+        "🐠  **ماذا تريد** 🐠",
         buttons=[
             [
-                Button.inline("GENERATE SAMPLE", data=f"gsmpl{key}"),
-                Button.inline("SCREENSHOTS", data=f"sshot{key}"),
+                Button.inline("إنشاء عينة ", data=f"gsmpl{key}"),
+                Button.inline("لقطات الشاشة ", data=f"sshot{key}"),
             ],
-            [Button.inline("COMPRESS", data=f"sencc{key}")],
+            [Button.inline("ضغط", data=f"sencc{key}")],
         ],
     )
 
 
 async def ccom(e):
-    await e.edit("Send Ur Custom Name For That File")
+    await e.edit("أرسل اسم للملف ")
     wah = e.pattern_match.group(1).decode("UTF-8")
     wh = decode(wah)
     out, dl, thum, dtime = wh.split(";")
@@ -111,7 +111,7 @@ async def ccom(e):
             g = repl.text + ".mkv"
         outt = f"encode/{chat}/{g}"
         x = await repl.reply(
-            f"Custom File Name : {g}\n\nSend Thumbnail Picture For it."
+            f"اسم الملف : {g}\n\nإرسال صورة مصغرة  Thumbnail ."
         )
         replyy = cv.wait_event(events.NewMessage(from_users=chat))
         rep = await replyy
