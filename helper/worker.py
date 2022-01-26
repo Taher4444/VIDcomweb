@@ -109,7 +109,7 @@ async def encc(e):
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=True,
+            force_document=False,
             thumb=thum)
         await nnn.delete()
         org = int(Path(dl).stat().st_size)
@@ -355,10 +355,11 @@ async def customenc(e, key):
                          progress(d, t, nnn, ttt, "جاري الرفع..")
                          ),
                      )
+
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=True,
+            force_document=False,
             thumb=thum)
         await nnn.delete()
     except Exception as er:
