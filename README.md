@@ -10,7 +10,7 @@
 - في الوقت الحالي ، قمت بتعيينه على 5 عمليات كحد أقصى في المرة الواحدة.
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 ### Translator
 
