@@ -12,7 +12,7 @@
 
 
 
-### Translator
+### Thansk to wahieb al-shameri
 
 wahebtalal@gmail.com
 
