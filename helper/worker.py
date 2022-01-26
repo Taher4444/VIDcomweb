@@ -109,7 +109,7 @@ async def encc(e):
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=False,
+            force_document=True,
             thumb=thum)
         await nnn.delete()
         org = int(Path(dl).stat().st_size)
@@ -170,7 +170,7 @@ async def sample(e):
         ds = await e.client.send_file(
             e.chat_id,
             file=f"{out}",
-            force_document=False,
+            force_document=True,
             thumb=thum,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                 progress(d, t, xxx, ttt, "جاري الرفع..", file=f"{out}")
@@ -359,7 +359,7 @@ async def customenc(e, key):
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=False,
+            force_document=True,
             thumb=thum)
         await nnn.delete()
     except Exception as er:
