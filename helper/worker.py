@@ -197,6 +197,11 @@ async def encod(event):
         if not event.is_private:
             return
         user = await event.get_chat()
+        if (user.id) in Block:
+            return await event.reply(
+                BlockMessage,
+                buttons=[Button.url(BlockButton, url=BlockUrl)],
+            )
         if not event.media:
             return
         if hasattr(event.media, "document"):
@@ -222,11 +227,6 @@ async def encod(event):
                  GroupMessage,
                 buttons=[Button.url(GroupButton, url=GroupUrl)],
             )
-         if (user.id) in Block:
-             return await event.reply(
-                 BlockMessage,
-                 buttons=[Button.url(BlockButton, url=BlockUrl)],
-             )
         if len(COUNT) > 4 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
