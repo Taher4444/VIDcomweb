@@ -110,7 +110,7 @@ async def encc(e):
                          ),
                      )
         duration = get_duration(dl)
-        thumb = get_thumbnail(f,  dl+"thum", duration / 4)
+        thumb = get_thumbnail(dl,  "./thumbs", duration / 4)
         high=get_height(dl)
         width=get_width(dl)
         ds = await e.client.send_file(
