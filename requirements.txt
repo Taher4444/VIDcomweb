@@ -4,3 +4,5 @@ pyaesni
 https://github.com/1Danish-00/Telethon/archive/master.zip
 html_telegraph_poster
 requests
+hachoir
+ffmpeg-python
