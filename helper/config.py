@@ -28,8 +28,8 @@ try:
     BlockUrl = config("BlockUrl",default="t.me/wahiebtalal")
     BlockButton = config("BlockButton", default="المسؤول")
     BlockMessage = config("BlockMessage", default="تم حضرك من استخدام البوت")
-
-    Block = list(set(int(x) for x in config("Block",default=" 1 2").split()))
+    bb=config("Block",default=" 1 2");
+    Block = list(set(int(x) for x in bb.split()))
 except Exception as e:
     LOGS.info("Environment vars Missing")
     LOGS.info("something went wrong")
