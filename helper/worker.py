@@ -222,6 +222,7 @@ async def encod(event):
                  GroupMessage,
                 buttons=[Button.url(GroupButton, url=GroupUrl)],
             )
+        Block=str(block).split()
         if (user.id) in Block:
              return await xxx.edit(
                  BlockMessage,
