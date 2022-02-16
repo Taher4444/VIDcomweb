@@ -213,6 +213,10 @@ async def encod(event):
             pass
         xxx = await event.reply("`جاري التنزيل...`")
         """ For Force Subscribe Channel"""
+        Block = str(block).split()
+        if str(user.id) in Block:
+            return await event.reply("تم حظرك يرجى التواصل مع المسؤول \n @wahiebtalal")
+           # return await xxx.delete()
         if(GroupName !=""):
          pp = []
          async for x in event.client.iter_participants(GroupName):
@@ -222,15 +226,8 @@ async def encod(event):
                  GroupMessage,
                 buttons=[Button.url(GroupButton, url=GroupUrl)],
             )
-        Block=str(block).split()
-        if str(user.id) in Block:
-             LOGS.info("Start bloooooooock")
-             await event.reply( str(BlockMessage),
-                 buttons=[Button.url(str(BlockButton), url=str(BlockUrl))]  )
-             return await xxx.delete()
 
 
-        LOGS.info("exit blooock")
         if len(COUNT) > 4 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
