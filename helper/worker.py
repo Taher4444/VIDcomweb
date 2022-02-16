@@ -11,9 +11,12 @@
 #    General Public License for more details.
 #
 #    License can be found in < https://github.com/wahebtalal/VideoCompressBot/blob/main/License> .
+import telethon.client
 
-
+from .ffmpegfunc import *
 from .funcn import *
+from telethon.tl.types import DocumentAttributeVideo
+from helper import ffmpegfunc
 from .FastTelethon import download_file, upload_file
 
 async def screenshot(e):
@@ -106,11 +109,18 @@ async def encc(e):
                          progress(d, t, nnn, ttt, "جاري الرفع..")
                          ),
                      )
+        duration = get_duration(ok)
+        thumb = get_thumbnail(f,  out+"thum", duration / 4)
+        high=get_height(ok)
+        width=get_width(ok)
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=True,
-            thumb=thum)
+            force_document=False,
+            thumb=thumb,
+            supports_streaming=True,
+            attributes=DocumentAttributeVideo(duration, width, high, supports_streaming=True)
+        )
         await nnn.delete()
         org = int(Path(dl).stat().st_size)
         com = int(Path(out).stat().st_size)
