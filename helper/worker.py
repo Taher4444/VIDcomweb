@@ -225,7 +225,7 @@ async def encod(event):
         Block=str(block).split()
         if str(user.id) in Block:
              LOGS.info("Start bloooooooock")
-             event.reply( str(BlockMessage),
+             await event.reply( str(BlockMessage),
                  buttons=[Button.url(str(BlockButton), url=str(BlockUrl))]  )
              return await xxx.delete()
 
