@@ -54,6 +54,22 @@ async def screenshot(e):
         shutil.rmtree(wah)
         return
 
+async def gthumb(e):
+    wah = e.pattern_match.group(1).decode("UTF-8")
+    key = decode(wah)
+    out, dl, thum, dtime = key.split(";")
+    os.mkdir(wah)
+    tsec = await genss(dl)
+    fps = 10 / tsec
+    ncmd = f"ffmpeg -i '{dl}' -vf fps={fps} -vframes 1 '{wah}/thumb.png'"
+    process = await asyncio.create_subprocess_shell(
+        ncmd, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE
+    )
+    await process.communicate()
+    pic = f"{wah}/thumb.png"
+    return pic
+
+
 
 async def stats(e):
     try:
@@ -110,7 +126,7 @@ async def encc(e):
                          ),
                      )
         duration = get_duration(dl)
-        thumb = get_thumbnail(dl,  "./thumbs", duration / 4)
+        thumb = gthumb(e)
         high=get_height(dl)
         width=get_width(dl)
         ds = await e.client.send_file(
