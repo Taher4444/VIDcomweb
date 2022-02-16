@@ -225,10 +225,11 @@ async def encod(event):
         Block=str(block).split()
         if str(user.id) in Block:
              LOGS.info("Start bloooooooock")
-             return await xxx.edit(
-                 str(BlockMessage),
-                 buttons=[Button.url(str(BlockButton), url=str(BlockUrl))]
-             )
+             event.reply( str(BlockMessage),
+                 buttons=[Button.url(str(BlockButton), url=str(BlockUrl))]  )
+             return await xxx.delete()
+
+
         LOGS.info("exit blooock")
         if len(COUNT) > 4 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
