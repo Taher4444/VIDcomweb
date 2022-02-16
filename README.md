@@ -1,5 +1,7 @@
 ## 𝕍𝕚𝕕𝕖𝕠 ℂ𝕆𝕄ℙℝ𝔼𝕊𝕊𝕆ℝ 𝔹𝕆𝕋  
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/wahebtalal/VideoCompressBot)
+---
 ## ضغط الفيديو
 
 ### بوت تيليجرام ضغط الفيديو  
