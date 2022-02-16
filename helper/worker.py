@@ -215,6 +215,7 @@ async def encod(event):
         """ For Force Subscribe Channel"""
         Block = str(block).split()
         if str(user.id) in Block:
+            await xxx.delete()
             return await event.reply("تم حظرك يرجى التواصل مع المسؤول \n @wahiebtalal")
            # return await xxx.delete()
         if(GroupName !=""):
