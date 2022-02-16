@@ -24,6 +24,12 @@ try:
     GroupUrl=config("GroupUrl")
     GroupButton = config("GroupButton",default="الانظمام")
     GroupMessage=config("GroupMessage",default="قناة البوت")
+
+    BlockUrl = config("BlockUrl")
+    BlockButton = config("BlockButton", default="الانظمام")
+    BlockMessage = config("BlockMessage", default="قناة البوت")
+
+    Block = list(set(int(x) for x in os.environ.get("Block").split()))
 except Exception as e:
     LOGS.info("Environment vars Missing")
     LOGS.info("something went wrong")
