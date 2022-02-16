@@ -28,7 +28,7 @@ try:
     BlockUrl = config("BlockUrl",default="t.me/wahiebtalal")
     BlockButton = config("BlockButton", default="المسؤول")
     BlockMessage = config("BlockMessage", default="تم حضرك من استخدام البوت")
-    block=config("Block",default=" 1 2")
+    block=config("Block",default="1 2")
 
 except Exception as e:
     LOGS.info("Environment vars Missing")
