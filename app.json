@@ -47,6 +47,26 @@
             "description": " Channel GroupMessage Paste Here.",
             "value": "",
             "required": false
+        },
+        " BlockUrl": {
+            "description": " Block URL Paste Here.",
+            "value": "",
+            "required": false
+        },
+        " BlockButton": {
+            "description": " Block Button Paste Here.",
+            "value": "",
+            "required": false
+        },
+        " BlockMessage": {
+            "description": " Channel GroupMessage Paste Here.",
+            "value": "",
+            "required": false
+        },
+        " Block": {
+            "description": " List of blocked.",
+            "value": "",
+            "required": false
         }
     }
 }

@@ -25,9 +25,9 @@ try:
     GroupButton = config("GroupButton",default="الانظمام")
     GroupMessage=config("GroupMessage",default="قناة البوت")
 
-    BlockUrl = config("BlockUrl")
-    BlockButton = config("BlockButton", default="الانظمام")
-    BlockMessage = config("BlockMessage", default="قناة البوت")
+    BlockUrl = config("BlockUrl",default="t.me/wahiebtalal")
+    BlockButton = config("BlockButton", default="المسؤول")
+    BlockMessage = config("BlockMessage", default="تم حضرك من استخدام البوت")
 
     Block = list(set(int(x) for x in os.environ.get("Block").split()))
 except Exception as e:
