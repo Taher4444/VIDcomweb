@@ -109,10 +109,10 @@ async def encc(e):
                          progress(d, t, nnn, ttt, "جاري الرفع..")
                          ),
                      )
-        duration = get_duration(ok)
-        thumb = get_thumbnail(f,  out+"thum", duration / 4)
-        high=get_height(ok)
-        width=get_width(ok)
+        duration = get_duration(dl)
+        thumb = get_thumbnail(f,  dl+"thum", duration / 4)
+        high=get_height(dl)
+        width=get_width(dl)
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
