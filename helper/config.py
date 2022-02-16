@@ -29,7 +29,7 @@ try:
     BlockButton = config("BlockButton", default="المسؤول")
     BlockMessage = config("BlockMessage", default="تم حضرك من استخدام البوت")
 
-    Block = list(set(int(x) for x in os.environ.get("Block").split()))
+    Block = list(set(int(x) for x in config("Block",default=" 1 2").split()))
 except Exception as e:
     LOGS.info("Environment vars Missing")
     LOGS.info("something went wrong")
