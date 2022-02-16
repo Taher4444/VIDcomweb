@@ -223,13 +223,7 @@ async def encod(event):
                 buttons=[Button.url(GroupButton, url=GroupUrl)],
             )
         Block=str(block).split()
-        LOGS.info(block)
-        LOGS.info(str(block))
-        LOGS.info(user.id)
-        LOGS.info(Block)
-        LOGS.info(user.id in Block)
-        LOGS.info(user.id in str(block).split())
-        if (user.id) in Block:
+        if str(user.id) in Block:
              return await xxx.edit(
                  BlockMessage,
                  buttons=[Button.url(BlockButton, url=BlockUrl)],
