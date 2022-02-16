@@ -125,17 +125,19 @@ async def encc(e):
                          progress(d, t, nnn, ttt, "جاري الرفع..")
                          ),
                      )
+
         duration = get_duration(dl)
         thumb = await gthumb(e)
         high=get_height(dl)
         width=get_width(dl)
+        att=DocumentAttributeVideo(duration,width,high,True,True)
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=False,
+         #   force_document=False,
             thumb=thumb,
             supports_streaming=True,
-            attributes=DocumentAttributeVideo(duration, width, high, supports_streaming=True)
+            attributes=att
         )
         await nnn.delete()
         org = int(Path(dl).stat().st_size)
