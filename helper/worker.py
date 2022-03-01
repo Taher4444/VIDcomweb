@@ -260,7 +260,7 @@ async def encod(event):
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
                 "ضغط على البوت , هناك 5 عمليات قيد التنفيذ",
-                buttons=[Button.url("حالة العمليات", url=llink)],
+                buttons=[Button.url("المشرف", url="t.me/wahiebtalal")],
             )
         if user.id in COUNT and user.id != OWNER:
             return await xxx.edit(
