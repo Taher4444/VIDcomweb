@@ -134,8 +134,8 @@ async def encc(e):
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-           force_document=False
-            #thumb=thum,
+           force_document=True,
+            thumb=thum
             #supports_streaming=True
         )
         await nnn.delete()
@@ -197,8 +197,8 @@ async def sample(e):
         ds = await e.client.send_file(
             e.chat_id,
             file=f"{out}",
-            force_document=False,
-            #thumb=thum,
+            force_document=True,
+            thumb=thum,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
                 progress(d, t, xxx, ttt, "جاري الرفع..", file=f"{out}")
             ),
@@ -321,7 +321,7 @@ async def encod(event):
         rr = f"encode/{user.id}"
         if not os.path.isdir(rr):
             os.mkdir(rr)
-        bb = kk.replace(f".{aa}", " compressed.mp4")
+        bb = kk.replace(f".{aa}", " compressed.mkv")
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
@@ -393,7 +393,7 @@ async def customenc(e, key):
         ds = await e.client.send_file(
             e.chat_id,
             file=ok,
-            force_document=False,
+            force_document=True,
             thumb=thum
         )
         await nnn.delete()
