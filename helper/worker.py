@@ -321,7 +321,7 @@ async def encod(event):
         rr = f"encode/{user.id}"
         if not os.path.isdir(rr):
             os.mkdir(rr)
-        bb = kk.replace(f".{aa}", " compressed.mkv")
+        bb = kk.replace(f".{aa}", " compressed.mp4")
         out = f"{rr}/{bb}"
         thum = "thumb.jpg"
         dtime = ts(int((es - s).seconds) * 1000)
