@@ -1,6 +1,6 @@
 ## ضغط الفيديو
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/wahebtalal/VideoCompressBot)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/wahebtalal/VIDcom)
 ---
 
 ### بوت تيليجرام ضغط الفيديو  
