@@ -1,10 +1,9 @@
 {
-    "name": "CompressorBot",
-    "description": "A Normal Telegram Bot Which can Compress/encode/ Generate Samples of videos.",
-    "logo": "https://telegra.ph/file/75ee20ec8d8c8bba84f02.jpg",
-    "keywords": ["Telegram","python", "Video","Compressor","Encoder"],
-    "repository": "https://github.com/1Danish-00/CompressorBot",
-    "success_url": "https://t.me/BotzHub",
+    "name": "ضغط الفيديو",
+    "description": "يقوم بضغط فيديوهات تيليجرام.",
+    "keywords": ["تيليجرام","تطوير", "بوت","فيديو","ضغط"],
+    "repository": "https://github.com/wahebtalal/VIDcom",
+    "success_url": "https://t.me/wahiebtalal",
     "stack": "container",
     "env": {
         "APP_ID": {
