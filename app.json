@@ -1,7 +1,6 @@
 {
-    "name": "ضغط الفيديو",
-    "description": "يقوم بضغط فيديوهات تيليجرام.",
-    "keywords": ["تيليجرام","تطوير", "بوت","فيديو","ضغط"],
+    "name": "wahieb",
+    "description": "wahieb",
     "repository": "https://github.com/wahebtalal/VIDcom",
     "success_url": "https://t.me/wahiebtalal",
     "stack": "container",
