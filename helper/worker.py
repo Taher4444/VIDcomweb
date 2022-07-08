@@ -327,10 +327,10 @@ async def encod(event):
         dtime = ts(int((es - s).seconds) * 1000)
         hehe = f"{out};{dl};{thum};{dtime}"
         key = code(hehe)
-      #  await xxx.delete()
+        await xxx.delete()
         inf = await info(dl, event)
         COUNT.remove(user.id)
-        await xxx.edit(
+        await event.client.send_message(
             event.chat_id,
             f"🐠اكتمل التنزيل !! 🐠",
             buttons=[
